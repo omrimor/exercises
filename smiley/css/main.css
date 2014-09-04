@@ -1,0 +1,43 @@
+/* box-sizing & margin rese */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+	border-spacing: 0;
+}
+
+td {
+	width: 50px;
+	height: 50px;
+	background: #000;
+}
+
+.brow,
+tr:nth-of-type(2) td:nth-child(-5n+9),
+tr:nth-of-type(2) td:nth-child(-5n+8) {
+	background: #c0c0c0;
+}
+
+tr:nth-child(4) td:not([data-not-eye]) {
+	background: #0000ff;
+}
+
+tr:nth-child(5) td:empty,
+tr:nth-child(6) td:empty,
+tr:nth-child(7) td[data-foo*="baz"] {
+	background: #ff00ff;
+}
+
+tr:nth-child(7) td[data-foo="smilebar"],
+tr:nth-child(8) td:nth-child(-5n+8),
+/* tr:nth-child(9) td > a[href="http://www.netcraft.co.il"], - I've tried this selector but it didnt work */
+tr:nth-child(9) td:not(:empty) {
+	background: #ff0000;
+}
