@@ -20,8 +20,8 @@ td {
 }
 
 .brow,
-tr:nth-of-type(2) td:nth-child(-5n+9),
-tr:nth-of-type(2) td:nth-child(-5n+8) {
+.brow + td,
+.brow + td + td {
 	background: #c0c0c0;
 }
 
@@ -31,13 +31,12 @@ tr:nth-child(4) td:not([data-not-eye]) {
 
 tr:nth-child(5) td:empty,
 tr:nth-child(6) td:empty,
-tr:nth-child(7) td[data-foo*="baz"] {
+td[data-foo*="baz"] {
 	background: #ff00ff;
 }
 
-tr:nth-child(7) td[data-foo="smilebar"],
+td[data-foo="smilebar"],
 tr:nth-child(8) td:nth-child(-5n+8),
-/* tr:nth-child(9) td > a[href="http://www.netcraft.co.il"], - I've tried this selector but it didnt work */
 tr:nth-child(9) td:not(:empty) {
 	background: #ff0000;
 }
