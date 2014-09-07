@@ -1,0 +1,538 @@
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #COMVERSE STYLE GUIDE */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #FONT IMPORT */
+
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+/* #BASIC RESET */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Arimo', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #STYLE GUIDE HEADINGS ONLY - FOR VIEWING THE DOC - REMOVE FROM DESIGN */
+
+.style-guide-heading {
+	font: arial 2em/2;
+	color: darkgray;
+	border-bottom: 1px solid darkgray;
+	margin: 10px 0 30px 0;
+}
+
+h1.style-guide-heading {
+	font-size: 2.2em;
+
+}
+
+h2.style-guide-heading  {
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-top: 50px;
+	border-width: 2px;
+}
+
+h3.style-guide-heading  {
+	font-size: 1.4em;
+}
+
+h4.style-guide-heading  {
+	font-size: 1.2em;
+}
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #BRAND */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #LOGO */
+
+.brand {
+	width: 165px;
+	height: 62px;
+	display: block;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #HEADINGS */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #H2 HEADING */
+
+h2 {
+    font-size: 4.2em;
+    line-height: 1.5;
+	font-weight: 400;
+}
+
+.carousel-heading {
+	color: #fff;
+	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
+}
+
+.section-heading {
+	text-transform: uppercase;
+}
+
+.section-heading.light {
+	color: #fff;
+	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
+}
+
+/* #H3 HEADING */
+
+h3 {
+	font-size: 3.6em;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.event-item-heading {
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
+
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #LISTS */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #NAVIGATION */
+
+.navigation {
+	list-style-type: none;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation li {
+	float: left;
+	border-left: 1px solid #d0d0d0;
+	padding: 0 10px;
+}
+
+.navigation li:first-child {
+	border: 0;
+	padding-left: 0;
+}
+
+.navigation-link:link,
+.navigation-link:visited {
+	color: rgb(88, 89, 81);
+	text-decoration: none;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+	color: rgb(51, 153, 204);
+}
+
+/* #SITEMAP LIST */
+
+.sitemap-list {
+	list-style-type: none;
+	font-size: 1.4em;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	background: #000; /* just to view on white bg - remove from design */
+}
+
+.sitemap-list h4 {
+	font-size: 1.6em;
+	line-height: 1.5;
+	font-weight: 400;
+	margin: 0 0 12px;
+	text-transform: uppercase;
+}
+
+.sitemap-list li {
+	margin: 0 0 7px;
+}
+
+.sitemap-list a,
+.sitemap-list a:link,
+.sitemap-list a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sitemap-list a:hover,
+.sitemap-list a:focus {
+	text-decoration: underline;
+}
+
+/* #SUB NAVIGATION */
+
+.sub-navigation {
+	list-style-type: none;
+	font-size: 1.3em;
+	padding: 0;
+	margin: 0;
+	color: #969696;
+}
+
+.sub-navigation li {
+	border-left: 1px solid #969696;
+	float: left;
+	padding: 0 8px;
+}
+
+.sub-navigation li:first-child {
+	border: none;
+	padding-left: 0;
+}
+
+.sub-navigation a,
+.sub-navigation a:link,
+.sub-navigation a:visited {
+	color: #969696;
+	text-decoration: none;
+}
+
+.sub-navigation a:hover,
+.sub-navigation a:focus {
+	text-decoration: underline;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #FORMS */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #SEARCHBOX */
+
+.searchbox {
+	background: #fff;
+	border: 1px solid #d2d2d2;
+	width: 150px;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.searchbox .submit {
+	background: url(../img/searchBtn.png) no-repeat center center;
+	width: 26px;
+	height: 20px;
+	float: right;
+	border: none;
+	cursor: pointer;
+}
+
+.searchbox .input-bg {
+	background: url(../img/divider.png) no-repeat scroll right 0px;
+	overflow: hidden;
+	border: none;
+	padding: 2px 5px;
+}
+
+.searchbox .input-bg input,
+.searchbox .input-bg input:focus {
+	background: none;
+	border: none;
+	width: 100%;
+	display: block;
+	color: #585951;
+	font-size: 1.3em;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #BUTTONS */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #PRIMARY_BUTTON */
+
+.button {
+	font-size: 1.6em;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background: rgba(33, 144, 199, 0.8);
+	border: 0;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2); 
+
+}
+
+.button a:link,
+.button a:visited,
+.button a:hover,
+.button a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.button a:after {
+	content:url(../img/btnArrow.png);
+	margin-left: 20px;
+}
+
+.primary-button {
+	display: block;
+	text-transform: uppercase;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #MODULES */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #INFO BOX */
+
+.info-box {
+	display: inline-block;
+	width: 290px;
+	height: 175px;
+	border-radius: 6px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+	padding: 20px 12px 0;
+}
+
+.info-box h4 {
+	height: 120px;
+	margin: 0;
+	padding: 0;
+	font-size: 2.4em;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #fff;
+}
+
+.info-box-footer-link {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+}
+
+.info-box-footer-link a {
+	color: #fff;
+	font-size: 1.4em;
+	text-decoration: none;
+}
+
+.info-box-footer-link a:hover {
+	text-decoration: underline;
+}
+
+.orange {
+	background: rgba(225, 116, 20, 0.8);
+}
+
+/* #EVENT BOX */
+
+.event-box-container {
+	background: #59bedb; /* just to see the opacity and bottom icon - remove from design */
+}
+
+.event-box {
+	width: 300px;
+	height: 120px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background: rgba(256, 256, 256, 0.4);
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.event-box p {
+	font-size: 1.6em;
+	line-height: 1.3;
+	margin: 0;
+	color: #1a1a1a;
+}
+
+.event-date {
+	width: 70px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+	background: #3399cc;
+	color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.event-date .event-day {
+	font-size: 3.6em;
+	line-height: 1.5;
+	height: 65px;
+	border-bottom: 1px dotted #fff;
+}
+
+.event-date .event-month {
+	font-size: 1.8em;
+	line-height: 1.3;
+	height: 35px;
+	text-transform: uppercase;
+}
+
+.view-all-events-link {
+	font-size: 1.4em;
+	line-height: 1;
+	color: #fff;
+	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
+}
+
+.view-all-events-link:link,
+.view-all-events-link:hover,
+.view-all-events-link:visited,
+.view-all-events-link:focus {
+	text-decoration: none;
+}
+
+.view-all-events-link.news:before {
+	content: url(../img/eventListIconNews.png);
+	margin-right: 5px;
+
+}
+
+/* #TESTIMONIALS BOX */
+
+.testimonials-box {
+	background: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /*this is just to view it on the white background - remove!!*/
+	display: inline-block;
+}
+
+.small-box {
+	width: 108px;
+	height: 95px;
+}
+
+.medium-box,
+.large-box {
+	height: 210px;
+	padding: 10px;
+}
+
+.medium-box {
+	width: 	226px;
+}
+
+.large-box {
+	width: 	350px;
+}
+
+.testimonials-box p {
+	font-size: 1.8em;
+	line-height: 1.6;
+	color: #6d6d6d;
+	margin: 0 0 7px 0;
+	float: left;
+}
+
+.large-box p {
+	width: 	210px;
+	margin-left: 10px;
+}
+
+.testimonials-box q {
+	quotes: none;
+}
+
+.testimonials-box q:before,
+.testimonials-box q:after {
+	content: url(../img/quote-grey.png);
+}
+
+.testimonials-box q:before {
+	margin-right: 7px;
+}
+
+.testimonials-box q:after {
+	margin-left: 7px;
+}
+
+.testimonials-info {
+	width: 100%;
+	border-top: 1px solid #dddddd;
+	padding-top: 7px;
+	float: left;
+}
+
+.testimonials-auther {
+	width: 130px;
+	height: 40px;
+	float: left;
+}
+
+.testimonials-auther .name, 
+.testimonials-auther .position {
+	font-size: 1.3em;
+	line-height: 1.5;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.testimonials-auther .name {
+	color: #47ACDD;
+} 
+
+.testimonials-auther cite {
+	font-style: normal;
+}
+
+.testimonials-auther-logo {
+	float: right;
+}
+
+.testimonials-auther-profile-picture {
+	float: left;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #ICONS */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #SOLUTIONS ICON */
+
+.solution-item {
+	background: #4eafcf; /* just so we can see on the white bg - remove from design */
+	width: 160px;
+}
+
+.solution-item p {
+	color: #fff;
+	font-size: 1.6em;
+	line-height: 1.3;
+	text-align: center;
+	margin: 10px;
+}
+
+.soultion-img-holder {
+	width: 60px;
+	margin: 0 auto;
+}
