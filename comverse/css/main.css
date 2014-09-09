@@ -27,7 +27,7 @@ html {
 /* ////////////////////////////////////////////////////////////////////////////////*/
 /* #STYLE GUIDE HEADINGS ONLY - FOR VIEWING THE DOC - REMOVE FROM DESIGN */
 
-body {
+.style-guide-body {
 	background: #e0e0e0;
 }
 
@@ -374,6 +374,14 @@ a.button:after {
 	display: inline-block;
 }
 
+.pink {
+	background: rgba(250, 66, 158, 0.8);
+}
+
+.green {
+	background: rgba(104, 192, 56, 0.8);
+}
+
 .orange {
 	background: rgba(225, 116, 20, 0.8);
 }
@@ -541,6 +549,11 @@ a.button:after {
 
 /* #SOLUTIONS ICON */
 
+.comverse-solutions {
+	background: #4ca8cd; 
+}
+
+
 .solutions-bullets {
 	list-style-type: none;
 	padding: 0;
@@ -563,4 +576,18 @@ a.button:after {
 .solution-item img {
 	display: block;
 	margin: 0 auto;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////*/
+/* #SLIDESHOW */
+/* ////////////////////////////////////////////////////////////////////////////////*/
+
+/* #SLIDESHOW */
+
+.carousel-slideshow {
+	background: #000;
 }
