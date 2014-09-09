@@ -21,7 +21,7 @@
 
 	<h3  class="style-guide-heading">Logo</h3>
 	<a class="brand" href="#">
-		<img class="comverse-logo" src="img/comverse-logo.png" alt="comverse company logo">
+		<img class="comverse-logo" src="img/comverse-logo.png" width="185" height="62" alt="comverse company logo">
 	</a>
 
 	<!-- BRAND COLORS -->
@@ -54,21 +54,25 @@
 
 	<!-- NAVIGATION -->
     <h3 class="style-guide-heading">main navigation</h3>
-    <ul class="navigation">
-    	<li><a class="navigation-link" href="#">item one</a></li>
-    	<li><a class="navigation-link" href="#">item two</a></li>
-    	<li><a class="navigation-link" href="#">item three</a></li>
-    	<li><a class="navigation-link" href="#">item fou</a>r</li>
-    </ul>
-
-    <h3 class="style-guide-heading">Sitemap Navigation list</h3>
-    <ul class="sitemap-list">
-        <h4>list title</h4>
+    <ul class="navigation clearfix">
     	<li><a href="#">item one</a></li>
     	<li><a href="#">item two</a></li>
     	<li><a href="#">item three</a></li>
     	<li><a href="#">item four</a></li>
     </ul>
+
+    <h3 class="style-guide-heading">Sitemap Navigation list</h3>
+    <div class="wrapper footer">
+    <!-- start component -->
+ 	    <h4 class="sitemap-list-title">list title</h4>
+	    <ul class="sitemap-list">
+	    	<li><a href="#">item one</a></li>
+	    	<li><a href="#">item two</a></li>
+	    	<li><a href="#">item three</a></li>
+	    	<li><a href="#">item four</a></li>
+	    </ul>
+    <!-- end component -->
+    </div>
 
     <h3 class="style-guide-heading">sub-navigation</h3>
     <ul class="sub-navigation">
@@ -85,7 +89,7 @@
 
 	<!-- PRIMARY BUTTON -->
     <h3 class="style-guide-heading">primary button</h3>
-    <button class="button primary-button"><a href="#">press me</a></button>
+    <a class="button primary-button" href="#">press me</a>
 
 
 
@@ -97,10 +101,8 @@
 	<!-- SEARCHBOX -->
     <h3 class="style-guide-heading">searchbox</h3>
     <div class="searchbox">
-    	<input class="submit" type="submit" value="">
-    	<div class="input-bg">
-	    	<input type="text">
-    	</div>
+        <input type="text">
+    	<a class="submit" href="#"></a>
     </div>
 
 
@@ -115,14 +117,15 @@
     <div class="info-box orange">
     	<h4>This is the information-box heading</h4>
     	<div class="info-box-footer-link">
-	    	<img class="info-box-icon" src="img/link-icon-image.png" alt="an icon indicating a link">
+	    	<img class="info-box-icon" src="img/link-icon-image.png" width="29" height="26" alt="an icon indicating a link">
 	    	<a href="#">Read More</a>
     	</div>
     </div>
 
 	<!-- EVENT BOX -->
     <h3 class="style-guide-heading">event box</h3>
-    <div class="event-box-container">
+    <div class="wrapper blue">
+    <!-- start component -->
 	    <div class="event-box news">
 	    	<div class="event-date">
 	    		<div class="event-day">29</div>
@@ -130,7 +133,8 @@
 	    	</div>
 	    	<p>Creating a Compelling Carrier Comeback Solution</p>
 	    </div>
-    	<a class="view-all-events-link news" href="#">All News</a>
+    	<a class="view-all-link news" href="#">All News</a>
+    <!-- end component -->
     </div>
 
 	<!-- TESTIMONIALS BOXES -->
@@ -138,31 +142,31 @@
 
     <h4 class="style-guide-heading">small-box</h4>
     <div class="testimonials-box small-box">
-    	<img src="img/MAX_telecom_w108px_X_h95.jpg" alt="max telecom company logo">
+    	<img src="img/MAX_telecom_w108px_X_h95.jpg" width="108" height="95" alt="max telecom company logo">
     </div>
 
     <h4 class="style-guide-heading">medium-box</h4>
     <div class="testimonials-box medium-box">
-    	<p><q>Comverse has demonstrated that they are partners, not just suppliers</q></p>
+    	 <blockquote>Comverse has demonstrated that they are partners, not just suppliers</blockquote>	
     	<div class="testimonials-info">
 	    	<div class="testimonials-auther">
 	    		<p class="name"><cite>Adale Kehassan</cite></p>
 	    		<p class="position">CIO</p>
 	    	</div>
-			<img class="testimonials-auther-logo" src="img/multilinks.jpg" alt="multilinks company logo">
+			<img class="testimonials-auther-logo" src="img/multilinks.jpg" width="70" height="40" alt="multilinks company logo">
     	</div>
     </div>
 
     <h4 class="style-guide-heading">large-box</h4>
     <div class="testimonials-box large-box">
-        <img class="testimonials-auther-profile-picture" src="img/CB-JP-face.png" alt="Adale Kehassan profile picture">
-    	<p><q>Comverse has demonstrated that they are partners, not just suppliers</q></p>
+        <img class="testimonials-auther-profile-picture" src="img/CB-JP-face.png" width="100" height="100" alt="Adale Kehassan profile picture">
+     	<blockquote>Comverse has demonstrated that they are partners, not just suppliers</blockquote>	
     	<div class="testimonials-info">
 	    	<div class="testimonials-auther">
 	    		<p class="name"><cite>Adale Kehassan</cite></p>
 	    		<p class="position">CIO</p>
 	    	</div>
-			<img class="testimonials-auther-logo" src="img/multilinks.jpg" alt="multilinks company logo">
+			<img class="testimonials-auther-logo" src="img/multilinks.jpg" width="70" height="40" alt="multilinks company logo">
     	</div>
     </div>
 
@@ -175,12 +179,12 @@
 
 	<!-- SOLUTIONS ICONS -->
     <h3 class="style-guide-heading">Solutions icons</h3>
-    <div class="solution-item">
-        <div class="soultion-img-holder">
-	    	<img src="img/ourSolutions-OOT-icon.png" alt="an icon indication a mountain summit">
-        </div>
-    	<p>solution tagline with 2 lines of text</p>
-    </div>
+    <ul class="solutions-bullets clearfix">
+    	<li class="solution-item">
+		    <img src="img/ourSolutions-OOT-icon.png" width="52" height="62" alt="an icon indication a mountain summit">
+	    	<p>solution tagline with 2 lines of text</p>
+    	</li>
+    </ul>
 
 </body>
 </html>

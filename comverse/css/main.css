@@ -18,13 +18,37 @@ html {
   box-sizing: inherit;
 }
 
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////*/
 /* #STYLE GUIDE HEADINGS ONLY - FOR VIEWING THE DOC - REMOVE FROM DESIGN */
 
+body {
+	background: #e0e0e0;
+}
+
+.wrapper {
+
+}
+
+.blue {
+	background: #59bedb;
+}
+
+.footer {
+	background: #000;
+}
+
+
+
 .style-guide-heading {
 	font: arial 2em/2;
-	color: darkgray;
-	border-bottom: 1px solid darkgray;
+	color: #9b9b9b;
+	border-bottom: 1px solid #9b9b9b;
 	margin: 10px 0 30px 0;
 }
 
@@ -81,7 +105,6 @@ h2 {
 
 .carousel-heading {
 	color: #fff;
-	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
 }
 
 .section-heading {
@@ -90,7 +113,6 @@ h2 {
 
 .section-heading.light {
 	color: #fff;
-	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
 }
 
 /* #H3 HEADING */
@@ -104,7 +126,6 @@ h3 {
 .event-item-heading {
 	color: #fff;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
 
 }
 
@@ -137,14 +158,15 @@ h3 {
 	padding-left: 0;
 }
 
-.navigation-link:link,
-.navigation-link:visited {
+.navigation a:link,
+.navigation a:visited {
 	color: rgb(88, 89, 81);
 	text-decoration: none;
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
+.navigation a:hover,
+.navigation a:active,
+.navigation a:focus {
 	color: rgb(51, 153, 204);
 }
 
@@ -156,10 +178,10 @@ h3 {
 	padding: 0;
 	margin: 0;
 	color: #fff;
-	background: #000; /* just to view on white bg - remove from design */
 }
 
-.sitemap-list h4 {
+.sitemap-list-title {
+	color: #fff;
 	font-size: 1.6em;
 	line-height: 1.5;
 	font-weight: 400;
@@ -179,6 +201,7 @@ h3 {
 }
 
 .sitemap-list a:hover,
+.sitemap-list a:active,
 .sitemap-list a:focus {
 	text-decoration: underline;
 }
@@ -212,6 +235,7 @@ h3 {
 }
 
 .sub-navigation a:hover,
+.sub-navigation a:active,
 .sub-navigation a:focus {
 	text-decoration: underline;
 }
@@ -227,35 +251,33 @@ h3 {
 /* #SEARCHBOX */
 
 .searchbox {
+	display: inline-block;
 	background: #fff;
 	border: 1px solid #d2d2d2;
 	width: 150px;
-	height: 20px;
 	border-radius: 5px;
 }
 
 .searchbox .submit {
 	background: url(../img/searchBtn.png) no-repeat center center;
+	display: inline-block;
 	width: 26px;
 	height: 20px;
 	float: right;
 	border: none;
+	border-left: 1px solid #d0d0d0;
 	cursor: pointer;
 }
 
-.searchbox .input-bg {
-	background: url(../img/divider.png) no-repeat scroll right 0px;
+.searchbox input,
+.searchbox input:focus {
+	background: none;
+	width: 122px;
+	padding: 2px 5px;
 	overflow: hidden;
 	border: none;
-	padding: 2px 5px;
-}
-
-.searchbox .input-bg input,
-.searchbox .input-bg input:focus {
-	background: none;
-	border: none;
-	width: 100%;
-	display: block;
+	float: left;
+	display: inline-block;
 	color: #585951;
 	font-size: 1.3em;
 }
@@ -280,21 +302,23 @@ h3 {
 
 }
 
-.button a:link,
-.button a:visited,
-.button a:hover,
-.button a:focus {
+a.button ,
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active,
+a.button:focus {
 	color: #fff;
 	text-decoration: none;
 }
 
-.button a:after {
+a.button:after {
 	content:url(../img/btnArrow.png);
 	margin-left: 20px;
 }
 
 .primary-button {
-	display: block;
+	display: inline-block;
 	text-transform: uppercase;
 }
 
@@ -331,16 +355,23 @@ h3 {
 	display: block;
 	height: 35px;
 	line-height: 35px;
+	vertical-align: top;
 }
 
 .info-box-footer-link a {
 	color: #fff;
 	font-size: 1.4em;
 	text-decoration: none;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .info-box-footer-link a:hover {
 	text-decoration: underline;
+}
+
+.info-box-icon {
+	display: inline-block;
 }
 
 .orange {
@@ -348,10 +379,6 @@ h3 {
 }
 
 /* #EVENT BOX */
-
-.event-box-container {
-	background: #59bedb; /* just to see the opacity and bottom icon - remove from design */
-}
 
 .event-box {
 	width: 300px;
@@ -395,42 +422,41 @@ h3 {
 	text-transform: uppercase;
 }
 
-.view-all-events-link {
+.view-all-link {
 	font-size: 1.4em;
 	line-height: 1;
 	color: #fff;
-	text-shadow: 1px 1px 1px gray; /*this is just to view it on the white background*/
+	display: inline-block;
+	vertical-align: top;
 }
 
-.view-all-events-link:link,
-.view-all-events-link:hover,
-.view-all-events-link:visited,
-.view-all-events-link:focus {
+.view-all-link:link,
+.view-all-link:hover,
+.view-all-link:visited,
+.view-all-link:active,
+.view-all-link:focus {
 	text-decoration: none;
 }
 
-.view-all-events-link.news:before {
+.view-all-link.news:before {
 	content: url(../img/eventListIconNews.png);
+	display: inline-block;
 	margin-right: 5px;
-
 }
 
 /* #TESTIMONIALS BOX */
 
 .testimonials-box {
 	background: #fff;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /*this is just to view it on the white background - remove!!*/
 	display: inline-block;
 }
 
 .small-box {
 	width: 108px;
-	height: 95px;
 }
 
 .medium-box,
 .large-box {
-	height: 210px;
 	padding: 10px;
 }
 
@@ -442,7 +468,7 @@ h3 {
 	width: 	350px;
 }
 
-.testimonials-box p {
+.testimonials-box blockquote {
 	font-size: 1.8em;
 	line-height: 1.6;
 	color: #6d6d6d;
@@ -450,26 +476,22 @@ h3 {
 	float: left;
 }
 
-.large-box p {
-	width: 	210px;
-	margin-left: 10px;
-}
-
-.testimonials-box q {
-	quotes: none;
-}
-
-.testimonials-box q:before,
-.testimonials-box q:after {
+.testimonials-box blockquote:before,
+.testimonials-box blockquote:after {
 	content: url(../img/quote-grey.png);
 }
 
-.testimonials-box q:before {
+.testimonials-box blockquote:before {
 	margin-right: 7px;
 }
 
-.testimonials-box q:after {
+.testimonials-box blockquote:after {
 	margin-left: 7px;
+}
+
+.large-box blockquote {
+	width: 	210px;
+	margin-left: 10px;
 }
 
 .testimonials-info {
@@ -519,9 +541,15 @@ h3 {
 
 /* #SOLUTIONS ICON */
 
+.solutions-bullets {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
 .solution-item {
-	background: #4eafcf; /* just so we can see on the white bg - remove from design */
 	width: 160px;
+	float: left;
 }
 
 .solution-item p {
@@ -532,7 +560,7 @@ h3 {
 	margin: 10px;
 }
 
-.soultion-img-holder {
-	width: 60px;
+.solution-item img {
+	display: block;
 	margin: 0 auto;
 }
