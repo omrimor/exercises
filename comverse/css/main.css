@@ -233,6 +233,7 @@ h3 {
 .searchbox input,
 .searchbox input:focus {
 	background: none;
+	outline: 0;
 	width: 122px;
 	padding: 2px 5px;
 	overflow: hidden;
