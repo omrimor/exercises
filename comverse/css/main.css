@@ -604,7 +604,7 @@ a.button:after {
 
 /* #SITE FOOTER */
 
-footer {
+footer.site {
 	background: #2d2d2d;
 }
 
