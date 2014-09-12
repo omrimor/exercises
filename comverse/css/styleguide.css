@@ -1,3 +1,7 @@
+/* #FONT IMPORT */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
 /* ////////////////////////////////////////////////////////////////////////////////*/
 /* #STYLE GUIDE CSS - FOR VIEWING THE DOC */
 
@@ -24,18 +28,17 @@
 	color: #9b9b9b;
 	border-bottom: 1px solid #9b9b9b;
 	margin: 10px 0 30px 0;
+	font-weight: 700;
+	border-width: 2px;
+	margin-top: 50px;
 }
 
 h1.sg-heading {
 	font-size: 2.2em;
-
 }
 
 h2.sg-heading  {
 	font-size: 1.8em;
-	font-weight: 700;
-	margin-top: 50px;
-	border-width: 2px;
 }
 
 h3.sg-heading  {
