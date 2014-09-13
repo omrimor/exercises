@@ -37,14 +37,14 @@
 
 	<!-- H2 HEADING -->
     <h3  class="sg-heading">h2 carousel heading</h3>
-    <h2 class="carousel">this is a h2 heading for the carousel slides</h3>
+    <h2>this is a h2 heading for the carousel slides</h3>
 
     <h3 class="sg-heading">h2 section heading light</h3>
-    <h2 class="section light">this is a h2 light heading for a section</h2>
+    <h2 class="section">this is a h2 light heading for a section</h2>
 
 	<!-- H3 HEADING -->
     <h3 class="sg-heading">h3 heading</h3>
-    <h3 class="event-item">this is a h3 heading</h3>
+    <h3>this is a h3 heading</h3>
 
 
 
@@ -65,13 +65,17 @@
     <h3 class="sg-heading">Sitemap Navigation list</h3>
     <div class="wrapper sg-footer">
     <!-- start component -->
- 	    <h4 class="sitemap-title">list title</h4>
-	    <ul class="sitemap">
-	    	<li><a href="#">item one</a></li>
-	    	<li><a href="#">item two</a></li>
-	    	<li><a href="#">item three</a></li>
-	    	<li><a href="#">item four</a></li>
-	    </ul>
+        <ul class="sitemap">
+        	<li>
+		 	    <h4 class="sitemap-list-title">list title</h4>
+			    <ul class="sitemap-list-item">
+			    	<li><a href="#">item one</a></li>
+			    	<li><a href="#">item two</a></li>
+			    	<li><a href="#">item three</a></li>
+			    	<li><a href="#">item four</a></li>
+			    </ul>
+        	</li>
+        </ul>
     <!-- end component -->
     </div>
 
@@ -90,7 +94,7 @@
 
 	<!-- PRIMARY BUTTON -->
     <h3 class="sg-heading">primary button</h3>
-    <a class="button" href="#">See all of our solutions</a>
+    <a class="btn" href="#">See all of our solutions</a>
 
 
 
@@ -101,13 +105,18 @@
 
 	<!-- SEARCHBOX -->
     <h3 class="sg-heading">searchbox</h3>
-    <div class="searchbox">
-        <input type="text">
-    	<a class="submit" href="#"></a>
-    </div>
+    <form class="searchbox">
+        <input type="search">
+    	<input type="submit">
+    </form>
 
 
-
+	<!-- sign-up -->
+    <h3 class="sg-heading">sign-up</h3>
+    <form class="signup-form">
+        <input type="email">
+    	<input type="submit" value="SIGN UP" class="btn-sign-up">
+    </form>
 
 
 	<!-- //////////////////////////// MODULES //////////////////////////// -->
@@ -115,18 +124,18 @@
 
 	<!-- INFORMATION BOX -->
     <h3 class="sg-heading">information box</h3>
-    <div class="info orange">
-    	<h4>This is the information-box heading</h4>
-    	<footer class="info">
-	    	<a href="#">Read More</a>
-    	</footer>
-    </div>
+    <ul>
+	    <li class="promotion-item orange">
+	    	<p>This is the information-box heading</p>
+	    	<footer>
+		    	<a href="#">Read More</a>
+	    	</footer>
+	    </li>
+    </ul>
 
 	<!-- EVENT BOX -->
     <h3 class="sg-heading">event box</h3>
-    <div class="wrapper blue">
-    <!-- start component -->
-	    <div class="event news">
+	    <div class="event">
 	    	<div class="date">
 	    		<div class="day">29</div>
 	    		<div class="month">Aug</div>
@@ -134,40 +143,38 @@
 	    	<p>Creating a Compelling Carrier Comeback Solution</p>
 	    </div>
     	<a class="view-all news" href="#">All News</a>
-    <!-- end component -->
-    </div>
 
 	<!-- TESTIMONIALS BOXES -->
 
     <h3 class="sg-heading">testimonials</h3>
     <h4 class="sg-heading">small-box</h4>
-    <div class="testimonials small">
+    <div class="testimonials small-ts">
     	<img src="img/MAX_telecom_w108px_X_h95.jpg" width="108" height="95" alt="max telecom company logo">
     </div>
 
     <h4 class="sg-heading">medium-box</h4>
-    <div class="testimonials medium">
+    <div class="testimonials medium-ts">
     	 <blockquote>Comverse has demonstrated that they are partners, not just suppliers</blockquote>	
-    	<div class="testimonials-info">
+    	<footer class="testimonials-info">
 	    	<div class="testimonials-author">
 	    		<p class="name"><cite>Adale Kehassan</cite></p>
 	    		<p class="position">CIO</p>
 	    	</div>
 			<img class="testimonials-author-logo" src="img/multilinks.jpg" width="70" height="40" alt="multilinks company logo">
-    	</div>
+    	</footer>
     </div>
 
     <h4 class="sg-heading">large-box</h4>
-    <div class="testimonials large">
+    <div class="testimonials large-ts">
         <img class="testimonials-author-profile-picture" src="img/CB-JP-face.png" width="100" height="100" alt="Adale Kehassan profile picture">
      	<blockquote>Comverse has demonstrated that they are partners, not just suppliers</blockquote>	
-    	<div class="testimonials-info">
+    	<footer class="testimonials-info">
 	    	<div class="testimonials-author">
 	    		<p class="name"><cite>Adale Kehassan</cite></p>
 	    		<p class="position">CIO</p>
 	    	</div>
 			<img class="testimonials-author-logo" src="img/multilinks.jpg" width="70" height="40" alt="multilinks company logo">
-    	</div>
+    	</footer>
     </div>
 
 
@@ -179,10 +186,9 @@
 
 	<!-- SOLUTIONS ICONS -->
     <h3 class="sg-heading">Solutions icons</h3>
-    <ul class="solutions-bullets clearfix">
-    	<li class="solution">
-		    <img src="img/ourSolutions-OOT-icon.png" width="52" height="62" alt="an icon indication a mountain summit">
-	    	<p>solution tagline with 2 lines of text</p>
+    <ul class="our-solutions clearfix">
+    	<li class="solution biz-analytics">
+	    	<a href="#"><p>Business Stimulating Analytics</p></a>
     	</li>
     </ul>
 
