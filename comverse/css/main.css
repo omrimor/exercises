@@ -121,6 +121,13 @@ a.btn:focus {
 	color: #fff;
 }
 
+a.btn:hover,
+a.btn:active,
+a.btn:focus {
+	background: linear-gradient(to bottom, #40a2d5 0%, #289ad2 100%);
+}
+
+
 a.btn:after {
 	display: inline-block;
 	content:"\25BA";
@@ -149,35 +156,111 @@ a.btn:after {
 	float: left;
 }
 
-.navigation li {
+.navigation li,
+.secondery li {
 	float: left;
-	border-left: 1px solid #d0d0d0;
-	padding: 0 10px;
 }
 
-.navigation li:first-child {
-	border: 0;
-	padding-left: 0;
+.navigation li {
+	padding: 10px 10px 20px;
 }
 
-.navigation a {
+.secondery li {
+	padding: 0px 10px;
+}
+
+.secondery li:last-child {
+	padding-right: 0;
+}
+
+.navigation li:hover {
+	background: #fcfcfc;
+	border: 1px solid #D5D5D5;
+	box-shadow: -5px 9px 8px rgba(0,0,0,0.4);
+}
+
+
+
+.navigation a,
+.secondery a {
 	color: rgb(88, 89, 81);
 }
 
 .navigation a:hover,
 .navigation a:active,
-.navigation a:focus {
+.navigation a:focus,
+.secondery a:hover,
+.secondery a:active,
+.secondery a:focus {
 	color: rgb(51, 153, 204);
 }
 
 .main {
-	margin: 45px 0 0 50px;
+	margin: 35px 0 0 50px;
 }
 
 .secondery {
 	font-size: 0.7em;
 	position: absolute;
 	right: 0;
+}
+
+nav.main > ul {
+	position: relative;
+	display: inline-block;
+}
+
+.mega-dropdwon {
+	display: none;
+	position: absolute;
+	left: -215px;
+	top: 45px;
+	padding: 30px 30px 15px;
+	z-index: 300;
+	width: 960px;
+	background: #fcfcfc;
+	box-shadow: -5px 9px 8px rgba(0,0,0,0.4);
+}
+
+.navigation li:hover .mega-dropdwon {
+	display: block;
+}
+
+.links {
+	display: inline-block;
+	float: left;
+}
+
+.links > ul,
+.links > ul > li {
+	width: 240px;
+	float: left;
+}
+
+.links > ul {
+	display: inline-block;
+	margin-right: 15px;
+
+}
+
+.links > ul > li {
+	text-transform: lowercase;
+	padding: 0;
+	margin-bottom: 4px;
+}
+
+.links > ul > li:hover {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+.marketing-image {
+	display: inline-block;
+	float: right;
+	border-left: 1px solid #ececec;
+	padding-left: 30px;
+
 }
 
 /* 
@@ -267,7 +350,7 @@ h4.sitemap-list-title {
 	display: inline-block;
 	width: 11px;
 	height: 11px;
-	text-indent: 999px;
+	text-indent: 9999px;
 	background: #e5e5e5;
 	border-radius: 3px;
 }
@@ -405,9 +488,10 @@ input[type="email"] {
 header.site {
 	position: relative;
 	z-index: 100;
+	height: 90px;
 	background: #fff;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-	padding: 15px 0;
+	padding: 15px 0 0;
 }
 
 /* 
@@ -497,6 +581,7 @@ footer.site {
 }
 
 .latest-blog-container .event,
+.latest-blog-container .event:hover,
 .latest-blog-container .date,
 .latest-blog-container .day {
 	background: none;
@@ -504,7 +589,8 @@ footer.site {
 	box-shadow: none;
 }
 
-.latest-blog-container .event {
+.latest-blog-container .event,
+.latest-blog-container .event:hover {
 	position: relative;
 	padding: 0;
 	margin: 0 auto;
@@ -512,13 +598,16 @@ footer.site {
 	border-bottom: 1px solid #6a6a6a;
 }
 
-
 .latest-blog-container .event,
-.latest-blog-container p {
+.latest-blog-container .blog-desc {
 	color: #fff;
 }
 
-.latest-blog-container p {
+.latest-blog-container a {
+	display: block;
+}
+
+.latest-blog-container .blog-desc {
 	font-size: 1em;
 }
 
@@ -541,9 +630,13 @@ h4 + form.signup-form {
    ========================================================================== */
 
 .promotions {
-	position: absolute;
-	bottom: 30px;
-	left: 240px;
+	padding-top: 40px; 
+}
+
+.promotion-item > a {
+	display: block;
+	background: none;
+	height: 100%;
 }
 
 .promotion-item {
@@ -552,13 +645,18 @@ h4 + form.signup-form {
 	width: 290px;
 	height: 174px;
 	padding: 20px 10px;
-	margin-left: 42px;
+	margin-left: 45px;
 	border-radius: 6px;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-.promotion-item:first-child {
-	margin: 0;
+.promotion-item:first-of-type {
+	margin-left: 0;
+}
+
+.promotion-item:last-of-type {
+	float: right;
+	margin-left: 30px;
 }
 
 .promotion-item p {
@@ -572,7 +670,7 @@ h4 + form.signup-form {
 	padding: 0;
 }
 
-.promotion-item > footer a {
+.promotion-item > footer > a[role="more-info"] {
 	background: url(../img/link-icon-image.png) no-repeat top left;
 	display: block;
 	padding-left: 34px;
@@ -583,7 +681,7 @@ h4 + form.signup-form {
 	height: 29px;
 }
 
-.promotion-item > footer a:hover {
+.promotion-item > footer > a[role="more-info"]:hover {
 	text-decoration: underline;
 }
 
@@ -604,6 +702,14 @@ h4 + form.signup-form {
 	margin: 0;
 }
 
+.event li a {
+	display: block;
+}
+
+.event li a:hover {
+
+}
+
 .event {
 	width: 296px;
 	height: 120px;
@@ -613,6 +719,13 @@ h4 + form.signup-form {
 	border-radius: 3px;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
+
+.event:hover {
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+}
+
 
 .event p {
 	font-size: 0.875em;
@@ -788,26 +901,61 @@ a.view-all  {
 	background: url(../img/solution_icon_biz-analitics.png) no-repeat top center;
 }
 
+.biz-analytics:hover,
+.biz-analytics:active,
+.biz-analytics:focus {
+	background: url(../img/solution_icon_biz-analitics_hover.png) no-repeat top center;
+}
+
 .digital-cx {
 	background: url(../img/solution_icon_diti-cx.png) no-repeat top center;
+}
+
+.digital-cx:hover,
+.digital-cx:active,
+.digital-cx:focus {
+	background: url(../img/solution_icon_diti-cx_hover.png) no-repeat top center;
 }
 
 .smart-money {
 	background: url(../img/solution_icon_smart-money.png) no-repeat top center;
 }
 
+.smart-money:hover,
+.smart-money:active,
+.smart-money:focus {
+	background: url(../img/solution_icon_smart-money_hover.png) no-repeat top center;
+}
+
 .optimize {
 	background: url(../img/solution_icon_optimize-efficnt.png) no-repeat top center;
+}
+
+.optimize:hover,
+.optimize:active,
+.optimize:focus {
+	background: url(../img/solution_icon_optimize-efficnt_hover.png) no-repeat top center;
 }
 
 .personalized {
 	background: url(../img/solution_icon_personal.png) no-repeat top center;
 }
 
+.personalized:hover,
+.personalized:active,
+.personalized:focus {
+	background: url(../img/solution_icon_personal_hover.png) no-repeat top center;
+}
+
 .biz-transform {
 	background: url(../img/solution_icon_biz-transform.png) no-repeat top center;
 }
 
+.biz-transform:hover,
+.biz-transform:active,
+.biz-transform:focus {
+	background: url(../img/solution_icon_biz-transform_hover.png) no-repeat top center;
+}
 
 
 
@@ -836,12 +984,24 @@ a.view-all  {
 	background: rgba(250, 66, 158, 0.8);
 }
 
+.pink:hover {
+	background: rgb(250, 66, 158);
+}
+
 .green {
 	background: rgba(104, 192, 56, 0.8);
 }
 
+.green:hover {
+	background: rgb(104, 192, 56);
+}
+
 .orange {
 	background: rgba(225, 116, 20, 0.8);
+}
+
+.orange:hover {
+	background: rgb(225, 116, 20);
 }
 
 .small-ts,
